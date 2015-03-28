@@ -21,7 +21,7 @@ module VeraLite
 
     def devicebyid(id)
       @devices.each do |device|
-        return device if device.id = id
+        return device if device.id == id
       end
     end
 
