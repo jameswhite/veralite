@@ -6,14 +6,11 @@ module VeraLite
         instance_variable_set( :"@#{key.downcase}", options[key] )
       end
       unless options['states'].nil?
-        @states = Array.new()
-        options['states'].each do |state|
-          @states.push(VeraLite::Device::State.new(state))
-        end
+        @state=VeraLite::Device::State.new(options['states'])
       end
     end
 
-    attr_accessor :id, :states, :jobs, :tooltip, :status
+    attr_accessor :id, :state, :jobs, :tooltip, :status
 
   end
 end
