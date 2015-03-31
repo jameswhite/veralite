@@ -18,5 +18,5 @@ if tripped
   print "#{(Time.now.to_i - last_tripped.to_i) % 60}s ago"
   puts ")"
 else
-  puts "http://i.ytimg.com/vi/kl0V9XHKDXE/maxresdefault.jpg"
+  puts "!http://i.ytimg.com/vi/kl0V9XHKDXE/maxresdefault.jpg"
 end
