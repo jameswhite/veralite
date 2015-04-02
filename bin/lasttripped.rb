@@ -8,7 +8,7 @@ vc = VeraLite.client(:bridge => '10.255.0.230')
 status='closed'
 tripped = vc.bridge.devicebyid(8).state.service['urn:micasaverde-com:serviceId:SecuritySensor1']['Tripped'].to_i
 
-if tripped
+if tripped == 1
   status = 'open'
   last_tripped = vc.bridge.devicebyid(8).state.service['urn:micasaverde-com:serviceId:SecuritySensor1']['LastTrip']
   print "Currently: [#{status}] Last tripped: "
