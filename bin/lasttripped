@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bundle exec ${BASH_SOURCE%/*}/lasttripped.rb
